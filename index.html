@@ -13,6 +13,10 @@
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- BootstrapのJS読み込み -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- アニメーションcssの読み込み -->
+    <link rel="stylesheet" href="animate.css">
+    <script src="js/scrollr.js"></script>
+    
 </head>
 <body>
     
@@ -25,29 +29,50 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand headnav" href=""><img src="img/26logo.png" width="100" height="50" id="topBtn"></a>
+      <a class="navbar-brand headnav" ><img src="img/26logo.png" width="75" class="topBtn"></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         <li><a id="corporate">CORPORATE</a></li>
         <li><a id="service">SERVICE</a></li>
-        <li><a href="#address">ADDRESS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a id="address">ADDRESS</a></li>
+        <li><a id="contact">CONTACT</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
     
+        <div id="back">
+            <img src="img/topback.jpg">
+    </div>
+    　
    <div id="contents">
-    
-        <div id="block1" class="">
-    <img src="img/26logo.png"  height="100" class="img1">
-    </div>
-    
-   <div class="background-air">
-    </div>
        
-    </div><!-- メインコンテンツおしまい --> 
+       <div id="corporatePage" data-0="top:100%;" data-100="top:0%;">
+           <img src="img/corporatemark.png" class="mark">
+           <div class="air"></div>
+           <img src="img/CORPORATE.png">
+       </div>
+       
+       <div id="servisPage" data-400="top:100%;" data-700="top:0%;"> 
+           <div class="air"></div>
+           
+       </div>
+       
+       <div id="addressPage" data-1000="top:100%;" data-1300="top:0%;">
+           <div class="air"></div>
+           
+       </div>
+       
+       <div id="contactPage" data-1600="top:100%;" data-1900="top:0%;">
+           <div class="air"></div>
+           
+       </div>
+       
+      
+    </div>
+    <!-- メインコンテンツおしまい --> 
+    
     
    <footer class="footer">
   <div class="container">
@@ -55,88 +80,89 @@
   </div>
 </footer>
     
+    <p id="page-top"><a href="#wrap"><img src="img/topbutton.png"></a></p>
     
+    <script src="js/scrollr.js"></script> 
   <script>
-    (function($){
         
-        $(document).ready(function(){
+    $(document).ready(function(){
+            /*  スクローラー読み込み */
+        
+            var s = skrollr.init();
             
-           var topBtn = $("#topBtn");
-            topBtn.click(function () {
+            /* ヘッダーのホバー時にアニメーション */
+            $(".navbar-brand").hover(
+                function(){
+                    $(this).toggleClass("jello animated");
+                }
+            ); 
+            
+            /* ヘッダーのスクロールアニメーション*/
+            $('.topBtn').click(function () {
+                $('body,html').animate({
+                scrollTop: 0
+                },600);
+            });
+            $('#corporate').click(function () {
+                $('body,html').animate({
+                scrollTop: 100
+                },600);
+            });
+            $('#service').click(function () {
+                $('body,html').animate({
+                scrollTop: 700
+                },600);
+            });
+            $('#address').click(function () {
+                $('body,html').animate({
+                scrollTop: 1300
+                },600);
+            });
+            $('#contact').click(function () {
+                $('body,html').animate({
+                scrollTop: 1900
+                },600);
+            });
+        
+            $(window).scroll(function(){
+               var val = $(this).scrollTop();
+                if (val >= 100) {
+                    
+                     $(".navbar-brand").removeClass("jello");
+                }
+                
+            });
+        
+        //　トップへ戻るやつ
+            var showFlag = false;
+    var topBtn = $('#page-top');    
+    topBtn.css('bottom', '-100px');
+    var showFlag = false;
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            if (showFlag == false) {
+                showFlag = true;
+                topBtn.stop().animate({'bottom' : '20px'}, 200); 
+            }
+        } else {
+            if (showFlag) {
+                showFlag = false;
+                topBtn.stop().animate({'bottom' : '-100px'}, 200); 
+            }
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
         $('body,html').animate({
             scrollTop: 0
-        }, 100);
+        }, 500);
         return false;
-            });
+    });
             
-            var corporate = $("#corporate");
-            corporate.click(function () {
-        $('body,html').animate({
-            scrollTop: 101
-        }, 100);
-        return false;
-            });
-            
-             var service = $("#service");
-            service.click(function () {
-        $('body,html').animate({
-            scrollTop: 301
-        }, 100);
-        return false;
-            });
-            
-            var phase = 0 ;
-            $(window).on('scroll',function(){
-                var s = $(this).scrollTop();
-              
-                if (s > 100 && phase == 0){
-                   
-                   phase = 1 ; 
-                  $("#block1").removeClass("anime1"); $("#block1").removeClass("anime0");
-                    $("#block1")[0].offsetWidth=$("#block1")[0].offsetWidth;
-                    $("#block1")[0].clientHeight=$("#block1")[0].clientHeight;
-                    $("#block1").addClass("anime1")
-                   $(".img1").fadeOut(300);
-                }
-                  if (s < 100 && phase == 1){
-                   
-                   phase = 0 ;
-                $("#block1").removeClass("anime00");
-                  $("#block1").removeClass("anime0"); $("#block1").removeClass("anime1");$("#block1")[0].offsetWidth=$("#block1")[0].offsetWidth; $("#block1")[0].clientHeight=$("#block1")[0].clientHeight;
-                    
-                      $("#block1").addClass("anime0");
-                   $(".img1").fadeIn(300);
-                }
-                
-                
-                 if (s > 300 && phase == 1){
-                   
-                   phase = 2 ; 
-                $("#block1").removeClass("anime00");
-                  $("#block1").removeClass("anime1"); $("#block1").removeClass("anime2");$("#block1")[0].offsetWidth=$("#block1")[0].offsetWidth; $("#block1")[0].clientHeight=$("#block1")[0].clientHeight;
-                    
-                      $("#block1").addClass("anime2");
-                }
-                
-                if (s < 300 && phase == 2){
-                   
-                   phase = 1 ; 
-                  $("#block1").removeClass("anime00"); $("#block1").removeClass("anime2");$("#block1")[0].offsetWidth=$("#block1")[0].offsetWidth; $("#block1")[0].clientHeight=$("#block1")[0].clientHeight;
-                    
-                      $("#block1").addClass("anime00");
+    });
         
-                }
-                
-                
-                
-                
-                console.log(phase);
-            });
-            
-            
-        });
         
-    })(jQuery);
     </script>
         
 </body>

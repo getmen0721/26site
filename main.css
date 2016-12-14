@@ -1,153 +1,72 @@
 body {
-    
-     /* 画像ファイルの指定 */
-  background-image: url(img/background-image.png) ;
-   
-  /* 画像を常に天地左右の中央に配置 */
-  background-position: center center;
-   
-  /* 画像をタイル状に繰り返し表示しない */
-  background-repeat: no-repeat;
-   
-  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
-  background-attachment: fixed;
-   
-  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-  background-size: cover;
-   
-  /* 背景画像が読み込まれる前に表示される背景のカラー */
-  background-color: #464646;
-    text-align: center;
-    margin: auto;
-}
-.headnav{
-    padding-top: 0;
-    
-}
-#block1{
-    background-color: #d3d4d6;
-    width: 300px;
-    height: 300px;
-    box-shadow:1px 5px 19px 5px rgba(0,0,0,0.3);
--moz-box-shadow:1px 5px 19px 5px rgba(0,0,0,0.3);
--webkit-box-shadow:1px 10px 19px 5px rgba(0,0,0,0.3);
-    position:fixed;
-    line-height: 300px;
-    vertical-align:middle;
-    top:50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-}
-
-#block1 > img{
-    vertical-align:middle;
-    position: fixed;
-    top:50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    
-}
-.background-air {
+    background-color:#312f30;
     height: 5000px;
+}
+#topimg {
+    background-image: url(img/topback.jpg);
     
 }
-footer{
+#back img {
+    width: 100vw;
+    height: 100vw;
+    margin-top: 50px;
     position: fixed;
-    bottom: 0%;
-    right: 50%;
-    transform: translate(50%, -50%);
 }
-
-
-
-.anime0{
-    animation:1s linear 0s 1 reverse forwards running box;
-}
-.anime00{
-    animation:1s linear 0s 1 reverse forwards running triangle ;
-}
-.anime1{
-    animation:1s linear 0s 1 normal forwards running box;
-}
-.anime2{
-    animation:1s linear 0s 1 normal forwards running triangle ;
-}
-
-
-@keyframes box {
-    0% {
-        width: 300px;
-        height: 300px;
-        background-color: #d3d4d6;
-         right: 50%;
-        border-radius: 0px;
-         box-shadow:1px 5px 19px 5px rgba(0,0,0,0.3);
--moz-box-shadow:1px 5px 19px 5px rgba(0,0,0,0.3);
--webkit-box-shadow:1px 10px 19px 5px rgba(0,0,0,0.3);
-    }
+#corporatePage {
     
-   
-    
-    50% {
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        right: 50%;
-        background-color: #bfc0c2;
-    }
-    100% {
-        width: 300px;
-        height: 300px;
-        border-radius: 150px;
-        right: 70%;
-    }
+    height: 100%;
+    width: 100%;
+    background-color: #ebebeb;
+    position: fixed;
+    top:100%;
+    text-align:center;
 }
 
-@keyframes 
-triangle {
-    0% {
-        width: 300px;
-        height: 300px;
-        border-radius: 150px;
-        right: 70%;
-        background-color: #bfc0c2;
-    }
+#servisPage {
     
-   
-    
-    40% {
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        right: 50%;
-    }
-    60% {
-width: 0;
-height: 0;
-border-style: solid;
-border-width: 150.8px 50px 0 50px;
-border-color: #abacae rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
-        background-color: transparent;
-        right: 50%;
-        top:50%;
-         box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
--moz-box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
--webkit-box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
-   
-    }
-    100% {
-width: 0;
-height: 0;
-border-style: solid;
-border-width: 259.8px 150px 0 150px;
-border-color: #abacae rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
-        background-color: transparent;
-        right: 50%;
-        top:40%;
-         box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
--moz-box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
--webkit-box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
-   
-    }
+    height: 100%;
+    width: 100%;
+    background-color: #e1e1e1;
+    position: fixed;
+    top:100%;
 }
 
+#addressPage {
+    
+    height: 100%;
+    width: 100%;
+    background-color: #d7d7d7;
+    position: fixed;
+    top:100%;
+}
+
+#contactPage {
+     
+    height: 100%;
+    width: 100%;
+    background-color: #cccccc;
+    position: fixed;
+    top:100%;
+}
+
+
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a:hover {
+   opacity: 0.5;
+}
+
+.air {
+    height: 60px;
+    
+}
+
+.mark {
+    top:-20%;
+    
+}
