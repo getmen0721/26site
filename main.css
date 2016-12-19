@@ -1,72 +1,224 @@
 body {
-    background-color:#312f30;
-    height: 5000px;
+	background-color: #312f30;
+	height: 2000px;
 }
 #topimg {
-    background-image: url(img/topback.jpg);
-    
+	background-image: url(img/topback.jpg);
 }
 #back img {
-    width: 100vw;
-    height: 100vw;
-    margin-top: 50px;
-    position: fixed;
+	width: 100vw;
+	height: 100%;
+	margin-top: 50px;
+	position: fixed;
 }
-#corporatePage {
-    
-    height: 100%;
-    width: 100%;
-    background-color: #ebebeb;
-    position: fixed;
-    top:100%;
-    text-align:center;
+#contents {
+	font-family: 'Hiragino Mincho Pro';
+	font-size: 20px;
 }
-
-#servisPage {
-    
-    height: 100%;
-    width: 100%;
-    background-color: #e1e1e1;
-    position: fixed;
-    top:100%;
+#contents p {
+	font-size: 18px;
+	margin: 0;
 }
-
-#addressPage {
-    
-    height: 100%;
-    width: 100%;
-    background-color: #d7d7d7;
-    position: fixed;
-    top:100%;
-}
-
-#contactPage {
-     
-    height: 100%;
-    width: 100%;
-    background-color: #cccccc;
-    position: fixed;
-    top:100%;
-}
-
-
-
 #page-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 77%;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 77%
 }
 #page-top a:hover {
-   opacity: 0.5;
+	opacity: 0.5;
 }
-
 .air {
-    height: 60px;
+	height: 60px;
+}
+.mark {
+	top: -20%;
+}
+/*　全体管理 */
+
+
+#corporatePage {
+	height: 100%;
+	width: 100%;
+	background-color: #ebebeb;
+	position: fixed;
+	top: 100%;
+	text-align: center;
+}
+.corporateMain {
+	width: 80%;
+	margin-top: 30px;
+	opacity: 0;
+}
+.corporateSabu {
+	margin: 0px 0px 30px 0px;
+}
+.Leftside {
+	text-align: left;
+	float: left;
+}
+.Rightside {
+	text-align: right;
+}
+.deco{
+     text-decoration:none;
+}
+/*　会社概要　*/
+
+
+#servicePage {
+	height: 100%;
+	width: 100%;
+	background-color: #e1e1e1;
+	position: fixed;
+	top: 100%;
+	text-align: center;
+   
+}
+.serviceMain {
+	margin-top: 30px;
+	width: 90%;
+}
+.serviceSabu1 {
+	background: rgb(255, 255, 255);
+	width: 200px;
+	height: 200px;
+	margin: 30px auto;
+}
+.serviceSabu2 {
+	background: rgb(255, 255, 255);
+	width: 200px;
+	height: 200px;
+	margin: 30px auto;
+}
+.serviceSabu3 {
+	background: white;
+	width: 200px;
+	height: 200px;
+	margin: 30px auto;
+}
+/* 事業内容 */
+
+
+#addressPage {
+	height: 100%;
+	width: 100%;
+	background-color: #d7d7d7;
+	position: fixed;
+	top: 100%;
+	text-align: center;
+}
+.addressmap1 {
+	position: absolute;
+	margin: auto;
+	top: 35%;
+	right: 0;
+	left: 0;
+}
+.addressmap2 {
+	position: absolute;
+	margin: auto;
+	top: 35%;
+	right: 0;
+	left: 0;
+}
+
+
+/* モーダル */
+#modal-content {
+    width: 80%;
+    height: 80%;
+    margin: 1.5em auto 0;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: #fff;
+    z-index: 9999;
+    position:fixed;
+    display: none;
+}
+#modal-content1 {
+    width: 80%;
+    height: 80%;
+    margin: 1.5em auto 0;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: #fff;
+    z-index: 9999;
+    position:fixed;
+    display: none;
+    text-align: center;
+}
+#modal-content2 {
+    width: 80%;
+    height: 80%;
+    margin: 1.5em auto 0;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: #fff;
+    z-index: 9999;
+    position:fixed;
+    display: none;
+    text-align: center;
+}
+#modal-content3 {
+    width: 80%;
+    height: 80%;
+    margin: 1.5em auto 0;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: #fff;
+    z-index: 9999;
+    position:fixed;
+    display: none;
+    text-align: center;
+}
+li {
+    list-style-type: none;
+}
+.modal-p{
+    margin-top: 1em;
+}
+.modal-p:first-child{
+    margin-top: 0;
+}
+
+ 
+.button-link:hover{
+opacity: 0.5;
+}
+#modal-overlay{
+	z-index:1;
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:120%;
+	background-color:rgba(0,0,0,0.75);
+}
+/* 所在地 */
+
+
+#contactPage {
+	height: 100%;
+	width: 100%;
+	background-color: #cccccc;
+	position: fixed;
+	top: 100%;
+	text-align: center;
+}
+.contactMain {
+    background: white;
+    height: 60%;
+    width: 80%;
+    margin-top: 20px;
     
 }
 
-.mark {
-    top:-20%;
-    
+#mailicon:hover {
+    opacity: 0.5;
 }
+
+/* お問い合わせ */
+
+
