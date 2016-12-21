@@ -395,7 +395,15 @@ $(document).ready(function() {
 
     }
 
-
+ $(".serviceA").lightSlider({
+        auto:true,
+        loop:true,
+        pauseOnHover: true,
+        onBeforeSlide: function (el) {
+            $('#current').text(el.getCurrentSlideCount());
+        } 
+       
+   });
 
 
 });
