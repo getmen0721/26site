@@ -180,11 +180,13 @@ $(document).ready(function() {
                     $(".addressmap2").attr({
                         src: "img/addressHead.gif"
                     });
+                    $("#addressanime").toggleClass("rubberBand animated");
                 }
             }
 
         } else {
             addressflag = true;
+            $("#addressanime").removeClass("rubberBand animated");
         }
     });
 

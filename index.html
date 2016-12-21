@@ -12,7 +12,7 @@
 	<!-- BootstrapのCSS読み込み -->
 	<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
 	<!-- BootstrapのJS読み込み -->
-	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
 	<!-- アニメーションcssの読み込み -->
 	<link rel="stylesheet" href="animate.css">
 	<!-- スクローラー.jsの読み込み -->
@@ -60,8 +60,8 @@
 
 		<div id="corporatePage" data-0="top:100%;" data-100="top:0%;">
 			<div class="air"></div>
-			<h2>会社概要</h2>
-			<img src="img/CORPORATE.png">
+			<h2 class="title">会社概要</h2>
+			<img src="img/CORPORATE.png" class="titleimg">
 
 			<div class="container corporateMain" data-0="opacity:0;" data-150="opacity:1;">
 				<div class="corporateSabu">
@@ -110,8 +110,8 @@
 
 		<div id="servicePage" data-400="top:100%;" data-700="top:0%;">
 			<div class="air"></div>
-			<h2>事業内容</h2>
-			<img src="img/SERVICE.png">
+			<h2 class="title">事業内容</h2>
+			<img src="img/SERVICE.png" class="titleimg">
 
 			<div class="container serviceMain">
                 
@@ -120,7 +120,7 @@
 		<div class="item active">
 			<div class="serviceSabu1">
                 <div id="modal-open1" class="button-link deco">
-							<p style="margin-top:10px;" class="deco">APP DEVELOPMENT</p>
+							<p style="margin-top:10px;" class="mozi">APP DEVELOPMENT</p>
 							<img src="img/appicon.png" width="200px;" id="appicon" class="animated infinite pulse">
                 </div>
             </div>
@@ -128,7 +128,7 @@
 		<div class="item">
 			<div class="serviceSabu2">
                 <div id="modal-open2" class="button-link deco">
-                    <p style="margin-top:10px;">WEB DEVELOPMENT</p>
+                    <p style="margin-top:10px;" class="mozi">WEB DEVELOPMENT</p>
 							<img src="img/webicon.png" id="webicon" width="200px;" class="animated infinite pulse">
                 </div>
                             
@@ -137,19 +137,19 @@
 		<div class="item">
 			<div class="serviceSabu3">
                 <div id="modal-open3" class="button-link deco">
-                    <p style="margin-top:10px;margin-bottom:20px;">DIRECTION<br>DEVELOPMENT</p>
+                    <p style="margin-top:10px;margin-bottom:20px;" class="mozi">DIRECTION<br>DEVELOPMENT</p>
 							<img src="img/directionicon.png" width="120px;" id="directionicon" class="animated infinite pulse">
                 </div>
                             
 						</div>
 		</div>
 	</div>
-	<a class="left carousel-control" href="#sampleCarousel" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	<a class="left carousel-control animated infinite pulse" href="#sampleCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left animated infinite pulse" aria-hidden="true"></span>
 		<span class="sr-only">前へ</span>
 	</a>
-	<a class="right carousel-control" href="#sampleCarousel" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	<a class="right carousel-control animated infinite pulse" href="#sampleCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right animated infinite pulse" aria-hidden="true"></span>
 		<span class="sr-only">次へ</span>
 	</a>
 </div>
@@ -163,23 +163,27 @@
 		<div id="addressPage" data-1000="top:100%;" data-1300="top:0%;">
 			<div class="air"></div>
 			<div id="addressOk">
-				<h2>所在地</h2>
-				<img src="img/ADDRESS.png">
+				<h2 class="title">所在地</h2>
+                 <img src="img/ADDRESS.png" class="titleimg">
+                <div class="air"></div>
+                <div id="addressanime">
 				<img src="img/addressMap.png" class="addressmap1">
 				<div id="addressHead" class="addressmap2">
 					<a id="modal-open" class="button-link">
 						<img src="img/addressHead.png" class="addressmap2 animated infinite pulse">
 					</a>
+                </div>
+				
 				</div>
 			</div>
 		</div>
 
 		<div id="contactPage" data-1600="top:100%;" data-1900="top:0%;">
 			<div class="air"></div>
-			<h2>お問い合わせ</h2>
-			<img src="img/CONTACT.png">
+			<h2 class="title">お問い合わせ</h2>
+			<img src="img/CONTACT.png" class="titleimg">
 			<div class="container contactMain">
-				<p style="margin-top:10px;">弊社のサイトをご覧いただきまして、誠にありがとうございます。
+				<p style="margin-top:10px;" class="mozi">弊社のサイトをご覧いただきまして、誠にありがとうございます。
 					<br> お問い合わせについては、弊社メールアドレスにご連絡ください。
 					<br>
 				</p>
@@ -216,7 +220,7 @@
     
     <div id="modal-content1">
 		<h2>APP DEVELOPMENT</h2>
-        <img src="img/appiconanime.gif" >
+        <img src="img/appiconanime.gif" class="modal-img" >
         <ul>
 	<li>iPhoneやAndroidアプリの企画・開発・運用</li>
 	<li>Twitter, Facebook連携アプリ</li>
@@ -224,13 +228,13 @@
 	<li>オムニチャネルアプリ</li>
 	<li>性格診断アプリ</li>
         </ul>
-		
+		<div style="height:10px;"></div>
 		<a id="modal-close" class="button-link">閉じる</a>
 	</div>
     
     <div id="modal-content2">
 		<h2>WEB DEVELOPMENT</h2>
-        <img src="img/webicon.gif" >
+        <img src="img/webicon.gif" class="modal-img" >
         <ul>
 	<li>Webサービスの企画・開発・運用</li>
 	<li>メール配信システム</li>
@@ -240,20 +244,21 @@
 	<li>EFOシステム</li>
 	<li>ゲーム攻略サイト</li>
 </ul>
+        <div style="height:10px;"></div>
 		
 		<a id="modal-close" >閉じる</a>
 	</div>
     
     <div id="modal-content3">
 		<h2>DIRECTION DEVELOPMENT</h2>
-        <img src="img/directionicon.gif" >
+        <img src="img/directionicon.gif" class="modal-img" >
      <ul>
          <div class="air"></div>
 	<li> ITコンサルティングサービス</li>
 	<li>ECサイト最適化</li>
 	<li>POSシステム最適化</li>
 </ul>
-		
+		<div style="height:10px;"></div>
 		<a id="modal-close" >閉じる</a>
 	</div>
     

@@ -8,7 +8,6 @@ body {
 #back img {
 	width: 100%;
 	height: 100%;
-	margin-top: 50px;
 	position: fixed;
 }
 #contents {
@@ -16,7 +15,6 @@ body {
 	font-size: 20px;
 }
 #contents p {
-	font-size: 18px;
 	margin: 0;
 }
 #page-top {
@@ -39,9 +37,27 @@ body {
 .air {
 	height: 60px;
 }
+.title{
+    font-size:30px;
+}
+.titleimg{
+    height:100px;
+}
+@media screen and (max-width: 500px) {
+    .air {
+	height: 40px;
+    }
+    .title{
+    font-size:15px;
+    }
+    .titleimg{
+    height:50px;
+    }
+}
 .mark {
 	top: -20%;
 }
+
 /*　全体管理 */
 
 
@@ -57,14 +73,14 @@ body {
 	width: 50%;
 	margin-top: 80px;
 	opacity: 0;
-    font-size: 60px;
+    font-size: 30px;
 }
 @media screen and (max-width: 500px) {
     .corporateMain {
 	width: 80%;
-	margin-top: 30px;
+	margin-top: 40px;
 	opacity: 0;
-    font-size: 20px;
+    font-size: 15px;
 }
 }
 .corporateSabu {
@@ -72,7 +88,7 @@ body {
 }
 @media screen and (max-width: 500px){
    .corporateSabu {
-	margin: 0px 0px 30px 0px;
+	margin: 0px 0px 25px 0px;
 } 
 }
 .Leftside {
@@ -98,27 +114,84 @@ body {
    
 }
 .serviceMain {
-	margin-top: 30px;
+	margin-top: 80px;
 	width: 60%;
+}
+@media screen and (max-width: 500px){
+    .serviceMain {
+	margin-top: 30px;
+	width: 80%;
+}
 }
 .serviceSabu1 {
 	background: rgb(255, 255, 255);
-	width: 200px;
-	height: 200px;
+	width: 400px;
+    height: 400px;
 	margin: 30px auto;
+}
+#appicon{
+    width:400px;
 }
 .serviceSabu2 {
 	background: rgb(255, 255, 255);
-	width: 200px;
-	height: 200px;
+	width: 400px;
+    height: 400px;
 	margin: 30px auto;
+}
+#webicon{
+    width:400px;
 }
 .serviceSabu3 {
 	background: white;
-	width: 200px;
-	height: 200px;
+	width: 400px;
+    height: 400px;
 	margin: 30px auto;
 }
+#directionicon{
+    width:300px;
+}
+.mozi{
+    font-size: 25px;
+}
+.modal-img{
+    width: 500px;
+}
+@media screen and (max-width: 500px){
+    .serviceSabu1 {
+	background: rgb(255, 255, 255);
+	width: 200px;
+    height: 200px;
+	margin: 30px auto
+    }
+    .serviceSabu2 {
+	background: rgb(255, 255, 255);
+	width: 200px;
+    height: 200px;
+	margin: 30px auto;
+    }
+    .serviceSabu3 {
+	background: white;
+	width: 200px;
+    height: 200px;
+	margin: 30px auto;
+    }
+    #appicon{
+    width:200px;
+    }
+    #webicon{
+    width:200px;
+    }
+    #directionicon{
+    width:120px;
+    } 
+    .mozi{
+    font-size: 15px;
+    }
+    .modal-img{
+    width: 160px;
+    }
+}
+
 /* 事業内容 */
 
 
@@ -216,8 +289,10 @@ body {
     display: none;
     text-align: center;
 }
-li {
-    list-style-type: none;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .modal-p{
     margin-top: 1em;
@@ -270,6 +345,13 @@ opacity: 0.5;
     #mailicon {
     width: 200px;
     margin-top: 10px;
+}
+    .contactMain {
+    background: white;
+    height: 60%;
+    width: 80%;
+    margin-top: 10px;
+    
 }
 }
 
