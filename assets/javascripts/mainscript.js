@@ -77,7 +77,6 @@ $(document).ready(function() {
         if (100 <= sTop) {
             if (300 >= sTop) {
                 if (corporateflag) {
-                    console.log(sTop);
                     corporateflag = false;
                     $(".corporateMain").toggleClass("rotateInDownLeft animated");
                 }
@@ -100,11 +99,10 @@ $(document).ready(function() {
 
             if (900 >= sTop) {
                 if (app1flag) {
-                    console.log(sTop);
                     app1flag = false;
                     $(".serviceSabu1").toggleClass("jello animated");
                     $("#appicon").attr({
-                        src: "img/appiconanime.gif"
+                        src: "assets/images/appicon.gif"
                     });
                 }
             }
@@ -124,11 +122,10 @@ $(document).ready(function() {
 
             if (900 >= sTop) {
                 if (app2flag) {
-                    console.log(sTop);
                     app2flag = false;
                     $(".serviceSabu2").toggleClass("jello animated");
                     $("#webicon").attr({
-                        src: "img/webicon.gif"
+                        src: "assets/images/webicon.gif"
                     });
                 }
             }
@@ -148,11 +145,10 @@ $(document).ready(function() {
 
             if (900 >= sTop) {
                 if (app3flag) {
-                    console.log(sTop);
                     app3flag = false;
                     $(".serviceSabu3").toggleClass("jello animated");
                     $("#directionicon").attr({
-                        src: "img/directionicon.gif"
+                        src: "assets/images/directionicon.gif"
                     });
                 }
             }
@@ -171,14 +167,13 @@ $(document).ready(function() {
 
         if (1300 <= sTop) {
             if (1500 >= sTop) {
-                console.log(addressflag);
                 if (addressflag) {
                     addressflag = false;
                     $(".addressmap1").attr({
-                        src: "img/addressMap.gif"
+                        src: "assets/images/addressMap.gif"
                     });
                     $(".addressmap2").attr({
-                        src: "img/addressHead.gif"
+                        src: "assets/images/addressHead.gif"
                     });
                     $("#addressanime").toggleClass("rubberBand animated");
                 }
@@ -197,12 +192,11 @@ $(document).ready(function() {
 
         if (1900 <= sTop) {
             if (2000 >= sTop) {
-                console.log(contactflag);
                 if (contactflag) {
                     contactflag = false;
                     $(".contactMain").toggleClass("bounce animated");
                     $("#mailicon").attr({
-                        src: "img/mailicon.gif"
+                        src: "assets/images/mailicon.gif"
                     });
                 }
             }
