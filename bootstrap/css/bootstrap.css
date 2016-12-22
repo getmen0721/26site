@@ -6337,8 +6337,10 @@ button.close {
   opacity: .5;
 }
 .carousel-control.left {
+    background-color: rgba(205,205,205,0.5);
 }
 .carousel-control.right {
+     background-color: rgba(205,205,205,0.5);
   right: 0;
   left: auto;
   background-repeat: repeat-x;

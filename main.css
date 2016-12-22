@@ -1,3 +1,6 @@
+
+/*　全体管理 */
+
 body {
 	background-color: #312f30;
 	height: 2000px;
@@ -74,7 +77,8 @@ body {
 	top: -20%;
 }
 
-/*　全体管理 */
+
+/* トップのブロック */
 
 #block{
     width: 300px;
@@ -201,7 +205,7 @@ body {
     }
 }
 
-/* トップのブロック */
+/*　会社概要　*/
 
 #corporatePage {
 	height: 100%;
@@ -243,8 +247,8 @@ body {
 .deco{
      text-decoration:none;
 }
-/*　会社概要　*/
 
+/* 事業内容 */
 
 #servicePage {
 	height: 100%;
@@ -298,6 +302,9 @@ body {
 .modal-img{
     width: 500px;
 }
+.modal-img2{
+    width: 500px;
+}
 @media screen and (max-width: 500px){
     .serviceSabu1 {
 	background: rgb(255, 255, 255);
@@ -332,10 +339,12 @@ body {
     .modal-img{
     width: 160px;
     }
+    .modal-img2{
+    width: 130px;
+    }
 }
 
-/* 事業内容 */
-
+/* 所在地 */
 
 #addressPage {
 	height: 100%;
@@ -381,6 +390,39 @@ body {
 	left: 0;
     width: 300px;
 }   
+}
+#Map{
+    display: none;
+}
+#Map2{
+    display: none;
+}
+@media screen and (max-width: 500px) {
+    .addressmap2 {
+        display: none;
+    }
+    .addressmap1 {
+        display: none;
+    }
+    #Map{
+        display:block;
+        position: absolute;
+	   margin: auto;
+	   top: 30%;
+	   right: 0;
+	   left: 0;
+        width: 300px;
+    }
+    #Map2{
+        display:block;
+        display:block;
+        position: absolute;
+	   margin: auto;
+	   top: 30%;
+	   right: 0;
+	   left: 0;
+        width: 300px;
+    }
 }
 
 /* モーダル */
@@ -450,7 +492,6 @@ ul {
 h2{
     margin: 0;
 }
-
  
 .button-link:hover{
 opacity: 0.5;
@@ -465,8 +506,16 @@ opacity: 0.5;
 	height:120%;
 	background-color:rgba(0,0,0,0.75);
 }
-/* 所在地 */
+.modal-air{
+    height: 10px;
+}
+@media screen and (max-width: 500px) {
+    .modal-air{
+    height: 2px;
+    }
+}
 
+/* お問い合わせ */
 
 #contactPage {
 	height: 100%;
@@ -495,16 +544,19 @@ opacity: 0.5;
     #mailicon {
     width: 200px;
     margin-top: 10px;
-}
+    }
     .contactMain {
     background: white;
     height: 60%;
     width: 80%;
     margin-top: 10px;
     
+    }
 }
+@media screen and (max-width: 330px) {
+    #mailicon {
+    width: 150px;
+    margin-top: 5px;
+    }
 }
-
-/* お問い合わせ */
-
 
