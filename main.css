@@ -1,153 +1,562 @@
+
+/*　全体管理 */
+
 body {
-    
-     /* 画像ファイルの指定 */
-  background-image: url(img/background-image.png) ;
-   
-  /* 画像を常に天地左右の中央に配置 */
-  background-position: center center;
-   
-  /* 画像をタイル状に繰り返し表示しない */
-  background-repeat: no-repeat;
-   
-  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
-  background-attachment: fixed;
-   
-  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
-  background-size: cover;
-   
-  /* 背景画像が読み込まれる前に表示される背景のカラー */
-  background-color: #464646;
-    text-align: center;
-    margin: auto;
+	background-color: #312f30;
+	height: 2000px;
 }
-.headnav{
-    padding-top: 0;
+#topimg {
+	background-image: url(img/topback.jpg);
+}
+#back img {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+}
+@media screen and (max-width: 1000px) {
+    #back img {
+	width: 1140px;
+	height: 100%;
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;    
+    }
+}
+#back {
+    position: fixed;
+}
+#contents {
+	font-family: 'Hiragino Mincho Pro';
+	font-size: 20px;
+}
+#contents p {
+	margin: 0;
+}
+#page-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	font-size: 77%
+}
+#up{
+    width: 100px;
+}
+@media screen and (max-width: 500px) {
+    #up{
+        width: 50px;
+    }   
+}
+#page-top a:hover {
+	opacity: 0.5;
+}
+.air {
+	height: 60px;
+}
+.title{
+    font-size:30px;
+}
+.titleimg{
+    height:100px;
+}
+@media screen and (max-width: 500px) {
+    .air {
+	height: 40px;
+    }
+    .title{
+    font-size:15px;
+    }
+    .titleimg{
+    height:50px;
+    }
     
 }
-#block1{
-    background-color: #d3d4d6;
+.mark {
+	top: -20%;
+}
+
+
+/* トップのブロック */
+
+#block{
     width: 300px;
     height: 300px;
-    box-shadow:1px 5px 19px 5px rgba(0,0,0,0.3);
--moz-box-shadow:1px 5px 19px 5px rgba(0,0,0,0.3);
--webkit-box-shadow:1px 10px 19px 5px rgba(0,0,0,0.3);
+    background-color:;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+     -webkit-animation: anime 5s ease 0s 2 alternate  forwards running;
+     animation: anime 5s ease 0s 2 alternate  forwards running;   
+}
+#logoimg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 500px) {
+    #block{
+    width: 200px;
+    height: 200px;
+    background-color:white;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+     -webkit-animation: anime 5s ease 0s 2 alternate  forwards running;
+     animation: anime 5s ease 0s 2 alternate  forwards running;   
+    }
+    #logoimg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    transform: translate(-50%, -50%);
+    }
+@-webkit-keyframes anime {
+    0%{
+        background-color: #e4e5e7;
+    }
+    15%{
+        background-color: #cdced1;
+        -webkit-transform: rotate(45deg);
+        border-radius:0% 0% 0% 0%;
+    }
+    30%{
+        background-color: #b7b8ba;
+         -webkit-transform: rotate(90deg);
+        border-radius:50% 0% 0% 0%;
+    }
+    45%{
+        background-color: #a2a3a5;
+         -webkit-transform: rotate(180deg);
+        border-radius:50% 50% 0% 0%;
+    }
+    60%{
+        background-color: #8d8f91;
+         -webkit-transform: rotate(270deg);
+        border-radius:50% 50% 50% 0%;
+    }
+    75%{
+        background-color: #7b7c7e;
+         -webkit-transform: rotate(360deg);
+        border-radius:50% 50% 50% 50%;
+        
+    }
+    90%{
+        background-color: #312f30;
+        border-radius:50% 50% 50% 50%;
+         -webkit-transform: rotate(360deg);
+        
+    }
+    100%{
+        background-color: #312f30;
+         -webkit-transform: rotate(720deg);
+    }
+}   
+}
+@keyframes anime {
+    0%{
+        background-color: #e4e5e7;
+    }
+    15%{
+        background-color: #cdced1;
+        transform: rotate(45deg);
+        border-radius:0% 0% 0% 0%;
+    }
+    30%{
+        background-color: #b7b8ba;
+        transform: rotate(90deg);
+        border-radius:50% 0% 0% 0%;
+    }
+    45%{
+        background-color: #a2a3a5;
+        transform: rotate(180deg);
+        border-radius:50% 50% 0% 0%;
+    }
+    60%{
+        background-color: #8d8f91;
+        transform: rotate(270deg);
+        border-radius:50% 50% 50% 0%;
+    }
+    75%{
+        background-color: #7b7c7e;
+        transform: rotate(360deg);
+        border-radius:50% 50% 50% 50%;
+        
+    }
+    90%{
+        background-color: #312f30;
+        border-radius:50% 50% 50% 50%;
+        transform: rotate(360deg);
+        
+    }
+    100%{
+        background-color: #312f30;
+        transform: rotate(720deg);
+    }
+}
+
+/*　会社概要　*/
+
+#corporatePage {
+	height: 100%;
+	width: 100%;
+	background-color: #ebebeb;
+	position: fixed;
+	top: 100%;
+	text-align: center;
+}
+.corporateMain {
+	width: 50%;
+	margin-top: 80px;
+	opacity: 0;
+    font-size: 30px;
+}
+@media screen and (max-width: 500px) {
+    .corporateMain {
+	width: 80%;
+	margin-top: 40px;
+	opacity: 0;
+    font-size: 15px;
+}
+}
+.corporateSabu {
+	margin: 0px 0px 50px 0px;
+}
+@media screen and (max-width: 500px){
+   .corporateSabu {
+	margin: 0px 0px 25px 0px;
+} 
+}
+.Leftside {
+	text-align: left;
+	float: left;
+}
+.Rightside {
+	text-align: right;
+}
+.deco{
+     text-decoration:none;
+}
+
+/* 事業内容 */
+
+#servicePage {
+	height: 100%;
+	width: 100%;
+	background-color: #e1e1e1;
+	position: fixed;
+	top: 100%;
+	text-align: center;
+   
+}
+.serviceMain {
+	margin-top: 80px;
+	width: 80%;
+}
+@media screen and (max-width: 600px){
+    .serviceMain {
+	margin-top: 30px;
+	width: 90%;
+}
+}
+.serviceSabu1 {
+	background: rgb(255, 255, 255);
+	width: 400px;
+    height: 400px;
+	margin: 30px auto;
+}
+#appicon{
+    width:400px;
+}
+.serviceSabu2 {
+	background: rgb(255, 255, 255);
+	width: 400px;
+    height: 400px;
+	margin: 30px auto;
+}
+#webicon{
+    width:400px;
+}
+.serviceSabu3 {
+	background: white;
+	width: 400px;
+    height: 400px;
+	margin: 30px auto;
+}
+#directionicon{
+    width:300px;
+}
+.mozi{
+    font-size: 25px;
+}
+.modal-img{
+    width: 500px;
+}
+.modal-img2{
+    width: 500px;
+}
+@media screen and (max-width: 500px){
+    .serviceSabu1 {
+	background: rgb(255, 255, 255);
+	width: 200px;
+    height: 200px;
+	margin: 30px auto
+    }
+    .serviceSabu2 {
+	background: rgb(255, 255, 255);
+	width: 200px;
+    height: 200px;
+	margin: 30px auto;
+    }
+    .serviceSabu3 {
+	background: white;
+	width: 200px;
+    height: 200px;
+	margin: 30px auto;
+    }
+    #appicon{
+    width:200px;
+    }
+    #webicon{
+    width:200px;
+    }
+    #directionicon{
+    width:120px;
+    } 
+    .mozi{
+    font-size: 15px;
+    }
+    .modal-img{
+    width: 160px;
+    }
+    .modal-img2{
+    width: 130px;
+    }
+}
+
+/* 所在地 */
+
+#addressPage {
+	height: 100%;
+	width: 100%;
+	background-color: #d7d7d7;
+	position: fixed;
+	top: 100%;
+	text-align: center;
+}
+.addressmap1 {
+	position: absolute;
+	margin: auto;
+	top: 30%;
+	right: 0;
+	left: 0;
+    width: 400px;
+}
+@media screen and (max-width: 500px) {
+ .addressmap1 {
+	position: absolute;
+	margin: auto;
+	top: 30%;
+	right: 0;
+	left: 0;
+    width: 300px;
+}   
+}
+
+.addressmap2 {
+	position: absolute;
+	margin: auto;
+	top: 30%;
+	right: 0;
+	left: 0;
+     width: 400px;
+}
+@media screen and (max-width: 500px) {
+ .addressmap2 {
+	position: absolute;
+	margin: auto;
+	top: 30%;
+	right: 0;
+	left: 0;
+    width: 300px;
+}   
+}
+#Map{
+    display: none;
+}
+#Map2{
+    display: none;
+}
+@media screen and (max-width: 500px) {
+    .addressmap2 {
+        display: none;
+    }
+    .addressmap1 {
+        display: none;
+    }
+    #Map{
+        display:block;
+        position: absolute;
+	   margin: auto;
+	   top: 30%;
+	   right: 0;
+	   left: 0;
+        width: 300px;
+    }
+    #Map2{
+        display:block;
+        display:block;
+        position: absolute;
+	   margin: auto;
+	   top: 30%;
+	   right: 0;
+	   left: 0;
+        width: 300px;
+    }
+}
+
+/* モーダル */
+#modal-content {
+    width: 80%;
+    height: 80%;
+    margin: 1.5em auto 0;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: #fff;
+    z-index: 9999;
     position:fixed;
-    line-height: 300px;
-    vertical-align:middle;
-    top:50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+    display: none;
+}
+#modal-content1 {
+    width: 80%;
+    height: 80%;
+    margin: 5px auto ;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: #fff;
+    z-index: 9999;
+    position:fixed;
+    display: none;
+    text-align: center;
+}
+#modal-content2 {
+    width: 80%;
+    height: 80%;
+    margin: 5px auto ;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: #fff;
+    z-index: 9999;
+    position:fixed;
+    display: none;
+    text-align: center;
+}
+#modal-content3 {
+    width: 80%;
+    height: 80%;
+    margin: 5px auto ;
+    padding: 10px 20px;
+    border: 2px solid #aaa;
+    background: #fff;
+    z-index: 9999;
+    position:fixed;
+    display: none;
+    text-align: center;
+}
+#carousel-sabu{
+    
+    background: red;
+    width: 100px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.modal-p{
+    margin-top: 1em;
+}
+.modal-p:first-child{
+    margin-top: 0;
+}
+h2{
+    margin: 0;
+}
+ 
+.button-link:hover{
+opacity: 0.5;
+}
+#modal-overlay{
+	z-index:1;
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:120%;
+	background-color:rgba(0,0,0,0.75);
+}
+.modal-air{
+    height: 10px;
+}
+@media screen and (max-width: 500px) {
+    .modal-air{
+    height: 2px;
+    }
 }
 
-#block1 > img{
-    vertical-align:middle;
-    position: fixed;
-    top:50%;
-    right: 50%;
-    transform: translate(50%, -50%);
+/* お問い合わせ */
+
+#contactPage {
+	height: 100%;
+	width: 100%;
+	background-color: #cccccc;
+	position: fixed;
+	top: 100%;
+	text-align: center;
+}
+.contactMain {
+    background: white;
+    height: 60%;
+    width: 80%;
+    margin-top: 20px;
     
 }
-.background-air {
-    height: 5000px;
+
+#mailicon:hover {
+    opacity: 0.5;
+}
+#mailicon {
+    width: 400px;
+    margin-top: 30px;
+}
+@media screen and (max-width: 500px) {
+    #mailicon {
+    width: 200px;
+    margin-top: 10px;
+    }
+    .contactMain {
+    background: white;
+    height: 60%;
+    width: 80%;
+    margin-top: 10px;
     
-}
-footer{
-    position: fixed;
-    bottom: 0%;
-    right: 50%;
-    transform: translate(50%, -50%);
-}
-
-
-
-.anime0{
-    animation:1s linear 0s 1 reverse forwards running box;
-}
-.anime00{
-    animation:1s linear 0s 1 reverse forwards running triangle ;
-}
-.anime1{
-    animation:1s linear 0s 1 normal forwards running box;
-}
-.anime2{
-    animation:1s linear 0s 1 normal forwards running triangle ;
-}
-
-
-@keyframes box {
-    0% {
-        width: 300px;
-        height: 300px;
-        background-color: #d3d4d6;
-         right: 50%;
-        border-radius: 0px;
-         box-shadow:1px 5px 19px 5px rgba(0,0,0,0.3);
--moz-box-shadow:1px 5px 19px 5px rgba(0,0,0,0.3);
--webkit-box-shadow:1px 10px 19px 5px rgba(0,0,0,0.3);
-    }
-    
-   
-    
-    50% {
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        right: 50%;
-        background-color: #bfc0c2;
-    }
-    100% {
-        width: 300px;
-        height: 300px;
-        border-radius: 150px;
-        right: 70%;
     }
 }
-
-@keyframes 
-triangle {
-    0% {
-        width: 300px;
-        height: 300px;
-        border-radius: 150px;
-        right: 70%;
-        background-color: #bfc0c2;
-    }
-    
-   
-    
-    40% {
-        width: 50px;
-        height: 50px;
-        border-radius: 25px;
-        right: 50%;
-    }
-    60% {
-width: 0;
-height: 0;
-border-style: solid;
-border-width: 150.8px 50px 0 50px;
-border-color: #abacae rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
-        background-color: transparent;
-        right: 50%;
-        top:50%;
-         box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
--moz-box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
--webkit-box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
-   
-    }
-    100% {
-width: 0;
-height: 0;
-border-style: solid;
-border-width: 259.8px 150px 0 150px;
-border-color: #abacae rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0);
-        background-color: transparent;
-        right: 50%;
-        top:40%;
-         box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
--moz-box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
--webkit-box-shadow:0px 0px 0px 0px rgba(0,0,0,0.3);
-   
+@media screen and (max-width: 330px) {
+    #mailicon {
+    width: 150px;
+    margin-top: 5px;
     }
 }
 
